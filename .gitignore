@@ -6,6 +6,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+.deepeval/
 
 # Python
 __pycache__/
@@ -29,6 +30,13 @@ share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+.python-version
 
 # Data
 DATA/

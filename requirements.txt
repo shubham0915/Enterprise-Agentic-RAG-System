@@ -4,6 +4,8 @@ uvicorn[standard]
 python-dotenv
 requests
 numpy
+pytz # Timezone handling for logs
+nest-asyncio # Support for nested async loops in notebooks/streamlit
 
 # Gemini Embeddings
 google-generativeai
@@ -24,16 +26,29 @@ pdfplumber # to parse pdf files
 # Observability and tracking
 logfire[fastapi,requests]
 loguru
-
-
+langsmith # Specialized tracing for LangChain/LangGraph
 
 # LangGraph and LLM integrations
+langchain # Core LLM orchestration
 langgraph # we have added this line by ourself
+langchain-groq # Integration for lightning-fast Llama 3.3 models
+langchain-google-vertexai # Required shim for NeMo Guardrails internal import (no GCP credentials needed)
+langchain-community # Community-contributed tools and loaders
 langchain-openai # we have added this line by ourself
+pydantic>=2.0.0 # Data validation and settings management
 portkey-ai # we have added this line by ourself
+
+# Guardrails
+nemoguardrails # NVIDIA NeMo Guardrails for input/output safety rails
+langchain-nvidia-ai-endpoints # LangChain integration with NVIDIA AI Endpoints
 
 # Search & Reranking
 flashrank # we have added this line by ourself
+
+# Evaluation (Evals)
+ragas # RAG-specific evaluation metrics (Faithfulness, Relevancy, Recall)
+deepeval # Pytest-compatible test runner wrapping RAGAS & safety metrics
+langfuse # Live production monitoring, tracing & user feedback collection
 
 # UI
 streamlit # we have added this line by ourself
